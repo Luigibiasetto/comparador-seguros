@@ -24,6 +24,9 @@
   "engines": {
     "node": "20.x"
   },
+  "overrides": {
+    "ajv": "^8"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
