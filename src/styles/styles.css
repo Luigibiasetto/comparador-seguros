@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.header p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Container geral */
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 36px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.container h2 {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+  color: #1a73e8;
+  border-bottom: 2px solid #e8f0fe;
+  padding-bottom: 12px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  background: #fafafa;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1a73e8;
+  background: white;
+}
+
+button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button[type="submit"] {
+  background: #1a73e8;
+  color: white;
+  margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+  background: #1558b0;
+}
+
+button[type="button"] {
+  background: #e8f0fe;
+  color: #1a73e8;
+  align-self: flex-start;
+}
+
+button[type="button"]:hover {
+  background: #d2e3fc;
+}
+
+/* Estado de carregando */
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #1a73e8;
+  font-size: 1rem;
+}
+
+/* Lista de seguros */
+.seguros-list {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.seguros-list h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.seguro-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #1a73e8;
+  transition: box-shadow 0.2s;
+}
+
+.seguro-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.seguro-info h3 {
+  font-size: 1.05rem;
+  color: #1a73e8;
+  margin-bottom: 4px;
+}
+
+.seguro-info p {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 2px 0;
+}
+
+.seguro-preco {
+  text-align: right;
+}
+
+.seguro-preco .preco {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.seguro-preco .moeda {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.btn-contratar {
+  background: #1a73e8;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.btn-contratar:hover {
+  background: #1558b0;
+}
+
+/* Sem resultados */
+.sem-resultados {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a2e;
+  color: #aaa;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #6ba3e8;
+  text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 24px;
+  }
+
+  .seguro-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .seguro-preco {
+    text-align: left;
+  }
+}
